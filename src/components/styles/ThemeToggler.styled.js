@@ -13,13 +13,22 @@ const Toggler = styled.button`
   position: relative;
   width: 6rem;
   height: 3rem;
-  margin-left:60px;
+  margin-left: 60px;
+  @media only screen and (max-width: 1000px) {
+    border-radius: 30px;
+    height: 2rem;
+    width: 4rem;
+    margin-left:5px
+  }
 
   svg {
     height: 2rem;
     width: auto;
     transition: all 0.3s linear;
 
+    @media only screen and (max-width: 1000px) {
+      height: 1rem;
+    }
     &:first-child {
       transform: ${({ lightTheme }) =>
         lightTheme ? "translateY(0)" : "translateY(100px)"};

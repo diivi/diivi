@@ -3,7 +3,6 @@ import ThemeToggler from "./ThemeToggler";
 import {
   Nav,
   NavLink,
-  Bars,
   NavMenu,
 } from "../styles/Navbar.styled.js";
 
@@ -12,7 +11,6 @@ const Navbar = ({theme,toggleTheme}) => {
   return (
     <>
       <Nav>
-        <Bars />
         <NavMenu>
           <NavLink exact to="/">
             Home
