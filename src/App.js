@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+
+import { ThemeProvider } from "styled-components";
+import { useDarkMode } from "./components/hooks/useDarkMode";
+import { lightTheme, darkTheme } from "./aesthetics/Themes";
+import { GlobalStyles } from "./aesthetics/globalStyles";
+
+import Navbar from "./components/Navbar";
+import { Switch, Route, Redirect } from "react-router-dom";
+
+import Home from "./pages/Home";
+import Friends from "./pages/Friends";
+import Contact from "./pages/Contact";
 
 function App() {
+  const [theme, toggleTheme, componentMounted] = useDarkMode();
+
+  const themeMode = theme === "light" ? lightTheme : darkTheme;
+
+  if (!componentMounted) {
+    return <div />;
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={themeMode}>
+      <GlobalStyles />
+      <Navbar theme={theme} toggleTheme={toggleTheme} />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/friends" component={Friends} />
+        <Route path="/contact" component={Contact} />
+        <Redirect to="/404" />
+      </Switch>
+      <h1>It's a {theme === "light" ? "light theme" : "dark theme"}!</h1>
+    </ThemeProvider>
   );
 }
 
