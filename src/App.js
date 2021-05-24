@@ -5,12 +5,14 @@ import { useDarkMode } from "./components/hooks/useDarkMode";
 import { lightTheme, darkTheme } from "./aesthetics/Themes";
 import { GlobalStyles } from "./aesthetics/globalStyles";
 
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 import { Switch, Route, Redirect } from "react-router-dom";
 
 import Home from "./pages/Home";
 import Friends from "./pages/Friends";
 import Contact from "./pages/Contact";
+
+const reload = () => window.location.reload();
 
 function App() {
   const [theme, toggleTheme, componentMounted] = useDarkMode();
@@ -29,9 +31,10 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route path="/friends" component={Friends} />
         <Route path="/contact" component={Contact} />
+        <Route path="/threedivi" onEnter={reload} />
+        <Route path="/covida" onEnter={reload} />
         <Redirect to="/404" />
       </Switch>
-      <h1>It's a {theme === "light" ? "light theme" : "dark theme"}!</h1>
     </ThemeProvider>
   );
 }

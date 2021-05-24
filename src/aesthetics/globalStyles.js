@@ -5,10 +5,10 @@ export const GlobalStyles = createGlobalStyle`
     background: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};
     font-family: 'Poppins',sans-serif;
-    
     transition: all 0.50s linear;
   }
   *{
     box-sizing:border-box;
+    -webkit-tap-highlight-color: transparent;
   }
-  `
+  `;

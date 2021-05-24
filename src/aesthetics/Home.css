@@ -1,0 +1,23 @@
+p {
+  word-wrap: wrap;
+  width: 55%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+svg:not(.toggler-svg) {
+  font-size: 2.5rem;
+  margin: 20px;
+}
+@media only screen and (max-width: 1000px) {
+  p {
+    font-size: 12px;
+    width: 100%;
+  }
+  div {
+    padding: 0% 3%;
+  }
+  svg:not(.toggler-svg) {
+    font-size: 2rem;
+    margin: 10px;
+  }
+}

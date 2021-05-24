@@ -10,8 +10,8 @@ const ThemeToggler = ({ theme, toggleTheme }) => {
   const isLight = theme === "light";
   return (
     <Toggler lightTheme={isLight} onClick={toggleTheme}>
-      <SunIcon />
-      <MoonIcon />
+      <SunIcon className={"toggler-svg"}/>
+      <MoonIcon className={"toggler-svg"}/>
     </Toggler>
   );
 };
