@@ -18,8 +18,8 @@ const Navbar = ({theme,toggleTheme}) => {
           <NavLink to="/friends">
             Friends
           </NavLink>
-          <NavLink to="/contact">
-            Contact
+          <NavLink to="/random">
+            Random
           </NavLink>
           <ThemeToggler theme={theme} toggleTheme={toggleTheme} />
         </NavMenu>

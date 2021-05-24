@@ -43,11 +43,25 @@ function Home() {
         cross-platform mobile apps with both, React Native & Flutter, and
         cross-platform desktop apps with Electron.
       </p>
-      <FaGithub />
-      <SiGmail />
-      <FaTelegram  />
-      <FaTwitter />
-      <SiLeetcode style={iconStyleLeet} />
+      <a target="_blank" rel="noreferrer" href="https://github.com/diivi">
+        <FaGithub />
+      </a>
+      <a
+        target="_blank"
+        rel="noreferrer"
+        href="https://mail.google.com/mail?view=cm&fs=1&to=divyanshanandsingh@gmail.com&body=Hello"
+      >
+        <SiGmail />
+      </a>
+      <a target="_blank" rel="noreferrer" href="https://t.me/divi_ded">
+        <FaTelegram />
+      </a>
+      <a target="_blank" rel="noreferrer" href="https://twitter.com/divi_ded_">
+        <FaTwitter />
+      </a>
+      <a target="_blank" rel="noreferrer" href="https://leetcode.com/diivi">
+        <SiLeetcode style={iconStyleLeet} />
+      </a>
     </MainInfo>
   );
 }
