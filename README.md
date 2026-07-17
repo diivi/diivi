@@ -1,6 +1,6 @@
 ![me](./me.gif)
 
-📃 [Résumé](https://drive.google.com/file/d/1pm8gJrimxfVWP3Zuy_PEBofoW_iO4U9H/view?usp=sharing)
+📃 [Résumé](https://drive.google.com/file/d/1-C7mUjcrYIQwpDWvFMnwsXvQJr3XUiIA/view?usp=sharing)
 
 📝 [Blog](https://dev.to/diivi)
 
